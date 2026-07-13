@@ -29,7 +29,7 @@ st.set_page_config(
 
 @st.cache_resource
 def load_bert_model():
-    MODEL_NAME = "yourusername/distilbert-sentiment-reviews"  # ← your HF repo
+    MODEL_NAME = "aish2067/distilbert-sentiment-reviews"  # ← your HF repo
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     model     = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
     model.eval()
