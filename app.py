@@ -29,8 +29,9 @@ st.set_page_config(
 
 @st.cache_resource
 def load_bert_model():
-    tokenizer = AutoTokenizer.from_pretrained("./distilbert_sentiment")
-    model     = AutoModelForSequenceClassification.from_pretrained("./distilbert_sentiment")
+    MODEL_NAME = "yourusername/distilbert-sentiment-reviews"  # ← your HF repo
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    model     = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
     model.eval()
     return tokenizer, model
 
